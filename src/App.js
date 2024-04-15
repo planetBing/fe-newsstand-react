@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/Header/Header.js";
 
 function App() {
   return (
     <div className="App">
-      <p>지금부터 리액트 시작~~</p>
+      <Header />
     </div>
   );
 }
