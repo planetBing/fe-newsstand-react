@@ -3,7 +3,8 @@
 ✅ 월요일 체크리스트
 
 - [ ] CRA 기반으로 리액트 환경 설정하기
-- [ ] 컴포넌트 만들어보기
+- [ ] Header 컴포넌트 만들어보기
+- [ ] props 학습
 
 # Getting Started with Create React App
 
