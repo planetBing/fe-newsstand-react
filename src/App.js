@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header.js";
 import RollingArea from "./components/Rolling/RollingBox.js";
-import TapViewerArea from "./components/TapViewer/TapViewerArea.js";
+import Main from "./components/Main/TapViewerArea.js";
 import { styled } from "styled-components";
 
 const Wrap = styled.div`
@@ -15,7 +15,7 @@ function App() {
       <Wrap>
         <Header />
         <RollingArea />
-        <TapViewerArea />
+        <Main />
       </Wrap>
     </div>
   );
