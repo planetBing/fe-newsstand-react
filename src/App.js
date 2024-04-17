@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header/Header.js";
-import RollingArea from "./components/Rolling/RollingBox.js";
+import RollingArea from "./components/Rolling/RollingArea.js";
 import Main from "./components/Main/TapViewerArea.js";
 import { styled } from "styled-components";
 
