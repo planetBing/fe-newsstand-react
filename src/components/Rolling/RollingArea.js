@@ -2,6 +2,8 @@ import { styled, keyframes, css } from "styled-components";
 import { useState, useEffect } from "react";
 import breakingNews from "../../breakingNews.js";
 
+const ROLLING_INTERVAL = 5000;
+
 const moveUp = css`
   ${keyframes`
   0% { transform: translateY(0); }
@@ -84,40 +86,66 @@ const StyledRollingNewsList = styled.div`
 `;
 
 function RollingArea() {
-  const firstHeadlines = breakingNews.slice(0, 5);
-  const [newsList, setItems] = useState(firstHeadlines);
+  const firstHeadlines = breakingNews.slice(0, breakingNews.length / 2);
+  const secondHeadlines = breakingNews.slice(
+    breakingNews.length / 2,
+    breakingNews.length
+  );
+  const [firstNewsList, setFirstNewsList] = useState(firstHeadlines);
+  const [secondNewsList, setSecondNewsList] = useState(secondHeadlines);
   const animationClass = ["prev", "current", "next"];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setItems((prevItems) => {
+      setFirstNewsList((prevItems) => {
         const newItems = [...prevItems];
         const lastItem = newItems.shift();
         newItems.push(lastItem);
         return newItems;
       });
-    }, 5000);
+    }, ROLLING_INTERVAL);
 
     return () => clearInterval(intervalId);
   }, []);
 
-  const newsListHtml = newsList.map((item, index) => (
-    <li className={animationClass[index]}>
-      <a href={item.href}>{item.title}</a>
-    </li>
-  ));
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSecondNewsList((prevItems) => {
+        const newItems = [...prevItems];
+        const lastItem = newItems.shift();
+        newItems.push(lastItem);
+        return newItems;
+      });
+    }, ROLLING_INTERVAL);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  function makeNewsListHtml(newsList) {
+    return newsList.map((item, index) => (
+      <li className={animationClass[index]}>
+        <a href={item.href}>{item.title}</a>
+      </li>
+    ));
+  }
 
   return (
     <RollingNewsArea>
       <StyledRollingBox>
         <span>연합뉴스</span>
-        <StyledRollingNewsList key={newsList.map((news) => news.id).join()}>
-          <ul>{newsListHtml}</ul>
+        <StyledRollingNewsList
+          key={firstNewsList.map((news) => news.id).join()}
+        >
+          <ul>{makeNewsListHtml(firstNewsList)}</ul>
         </StyledRollingNewsList>
       </StyledRollingBox>
       <StyledRollingBox>
         <span>연합뉴스</span>
-        <StyledRollingNewsList></StyledRollingNewsList>
+        <StyledRollingNewsList
+          key={secondNewsList.map((news) => news.id).join()}
+        >
+          <ul>{makeNewsListHtml(secondNewsList)}</ul>
+        </StyledRollingNewsList>
       </StyledRollingBox>
     </RollingNewsArea>
   );
