@@ -111,7 +111,7 @@ function RollingArea() {
     <RollingNewsArea>
       <StyledRollingBox>
         <span>연합뉴스</span>
-        <StyledRollingNewsList key={newsList[0].title}>
+        <StyledRollingNewsList key={newsList.map((news) => news.id).join()}>
           <ul>{newsListHtml}</ul>
         </StyledRollingNewsList>
       </StyledRollingBox>
