@@ -1,6 +1,5 @@
 import { styled, keyframes, css } from "styled-components";
 import { useState, useEffect } from "react";
-// import RollingNewsBox from "./RollingNewsBox.js";
 import breakingNews from "../../breakingNews.js";
 
 const moveUp = css`
@@ -87,6 +86,7 @@ const StyledRollingNewsList = styled.div`
 function RollingArea() {
   const firstHeadlines = breakingNews.slice(0, 5);
   const [newsList, setItems] = useState(firstHeadlines);
+  const animationClass = ["prev", "current", "next"];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -102,17 +102,7 @@ function RollingArea() {
   }, []);
 
   const newsListHtml = newsList.map((item, index) => (
-    <li
-      className={
-        index === 0
-          ? "prev"
-          : index === 1
-          ? "current"
-          : index === 2
-          ? "next"
-          : ""
-      }
-    >
+    <li className={animationClass[index]}>
       <a href={item.href}>{item.title}</a>
     </li>
   ));
