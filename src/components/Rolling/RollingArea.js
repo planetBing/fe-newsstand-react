@@ -109,17 +109,17 @@ function RollingArea() {
   }, []);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const timeoutId = setTimeout(() => {
       setSecondNewsList((prevItems) => {
         const newItems = [...prevItems];
         const lastItem = newItems.shift();
         newItems.push(lastItem);
         return newItems;
       });
-    }, ROLLING_INTERVAL);
+    }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+    return () => clearTimeout(timeoutId);
+  }, [firstNewsList]);
 
   function makeNewsListHtml(newsList) {
     return newsList.map((item, index) => (
