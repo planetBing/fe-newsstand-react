@@ -28,7 +28,6 @@ const ViewerArea = styled.div`
     margin-left: 10px;
   }
 `;
-//컴포넌트 추가 및 분리 예정...
 
 function TapViewerArea() {
   return (

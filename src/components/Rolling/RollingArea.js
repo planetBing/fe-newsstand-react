@@ -44,6 +44,7 @@ const StyledRollingNewsList = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 100%;
+  overflow: hidden;
 
   & ul {
     list-style: none;
@@ -123,7 +124,7 @@ function RollingArea() {
 
   function makeNewsListHtml(newsList) {
     return newsList.map((item, index) => (
-      <li className={animationClass[index]}>
+      <li key={index} className={animationClass[index]}>
         <a href={item.href}>{item.title}</a>
       </li>
     ));
