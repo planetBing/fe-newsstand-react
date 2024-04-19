@@ -2,7 +2,15 @@ import { styled } from "styled-components";
 import { useState } from "react";
 import listSvg from "../../assets/list-view.svg";
 import gridSvg from "../../assets/grid-view.svg";
-import PressWrap from "./PressWrap.js";
+import TotalGrid from "./TotalGrid.js";
+import TotalList from "./TotalList.js";
+
+const MainWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+`;
 
 const StyledTapViewerArea = styled.section`
   width: 930px;
@@ -42,13 +50,9 @@ const GridView = styled.img`
 function Main({ news }) {
   const [view, setView] = useState("grid");
 
-  const clickListView = () => {
-    setView("list");
-  };
+  const clickListView = () => setView("list");
 
-  const clickGridView = () => {
-    setView("grid");
-  };
+  const clickGridView = () => setView("grid");
 
   return (
     <>
@@ -72,7 +76,10 @@ function Main({ news }) {
           />
         </ViewerArea>
       </StyledTapViewerArea>
-      <PressWrap news={news} />
+      <MainWrap>
+        {view === "grid" && <TotalGrid news={news} />}
+        {view === "list" && <TotalList news={news} />}
+      </MainWrap>
     </>
   );
 }

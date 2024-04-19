@@ -3,13 +3,6 @@ import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
 import { useState } from "react";
 
-const Main = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  position: relative;
-`;
-
 const PressGridWrap = styled.div`
   width: 930px;
   height: 388px;
@@ -48,7 +41,7 @@ const NewsLogo = styled.img`
   object-fit: contain;
 `;
 
-function PressWrap({ news }) {
+function TotalGrid({ news }) {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 24;
 
@@ -56,35 +49,29 @@ function PressWrap({ news }) {
     return <div>Loading...</div>;
   }
 
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
+  const nextPage = () => setCurrentPage(currentPage + 1);
 
-  const previousPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
+  const previousPage = () => setCurrentPage(currentPage - 1);
 
   const startIndex = currentPage * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, news.length);
   const displayedNews = news.slice(startIndex, endIndex);
 
   return (
-    <Main>
-      <PressGridWrap key={currentPage}>
-        {currentPage !== 0 && (
-          <LeftButton onClick={previousPage} src={leftBtn} alt="leftBtn" />
-        )}
-        {currentPage !== 3 && (
-          <RightButton onClick={nextPage} src={rightBtn} alt="rightBtn" />
-        )}
-        {displayedNews.map((newsItem, index) => (
-          <PressBox key={index}>
-            <NewsLogo src={newsItem.logoImageSrc} alt={newsItem.pressName} />
-          </PressBox>
-        ))}
-      </PressGridWrap>
-    </Main>
+    <PressGridWrap key={currentPage}>
+      {currentPage !== 0 && (
+        <LeftButton onClick={previousPage} src={leftBtn} alt="leftBtn" />
+      )}
+      {currentPage !== 3 && (
+        <RightButton onClick={nextPage} src={rightBtn} alt="rightBtn" />
+      )}
+      {displayedNews.map((newsItem, index) => (
+        <PressBox key={index}>
+          <NewsLogo src={newsItem.logoImageSrc} alt={newsItem.pressName} />
+        </PressBox>
+      ))}
+    </PressGridWrap>
   );
 }
 
-export default PressWrap;
+export default TotalGrid;
