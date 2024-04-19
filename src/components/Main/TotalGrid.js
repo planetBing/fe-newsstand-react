@@ -3,6 +3,10 @@ import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
 import { useState } from "react";
 
+const ITEMS_PER_PAGE = 24;
+const FIRST_PAGE_INDEX = 0;
+const LAST_PAGE_INDEX = 3;
+
 const PressGridWrap = styled.div`
   width: 930px;
   height: 388px;
@@ -43,7 +47,7 @@ const NewsLogo = styled.img`
 
 function TotalGrid({ news }) {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 24;
+  const itemsPerPage = ITEMS_PER_PAGE;
 
   if (news.length === 0) {
     return <div>Loading...</div>;
@@ -59,10 +63,10 @@ function TotalGrid({ news }) {
 
   return (
     <PressGridWrap key={currentPage}>
-      {currentPage !== 0 && (
+      {currentPage !== FIRST_PAGE_INDEX && (
         <LeftButton onClick={previousPage} src={leftBtn} alt="leftBtn" />
       )}
-      {currentPage !== 3 && (
+      {currentPage !== LAST_PAGE_INDEX && (
         <RightButton onClick={nextPage} src={rightBtn} alt="rightBtn" />
       )}
       {displayedNews.map((newsItem, index) => (
