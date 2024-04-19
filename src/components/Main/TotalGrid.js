@@ -46,7 +46,7 @@ const NewsLogo = styled.img`
 `;
 
 function TotalGrid({ news }) {
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(FIRST_PAGE_INDEX);
   const itemsPerPage = ITEMS_PER_PAGE;
 
   if (news.length === 0) {
@@ -58,7 +58,7 @@ function TotalGrid({ news }) {
   const previousPage = () => setCurrentPage(currentPage - 1);
 
   const startIndex = currentPage * itemsPerPage;
-  const endIndex = Math.min(startIndex + itemsPerPage, news.length);
+  const endIndex = startIndex + itemsPerPage;
   const displayedNews = news.slice(startIndex, endIndex);
 
   return (
