@@ -1,4 +1,7 @@
 import { styled } from "styled-components";
+import leftBtn from "../../assets/LeftButton.svg";
+import rightBtn from "../../assets/RightButton.svg";
+import { useState } from "react";
 
 const Main = styled.div`
   display: flex;
@@ -23,23 +26,60 @@ const PressBox = styled.div`
   border-bottom: 1px solid rgba(210, 218, 224, 1);
   border-right: 1px solid rgba(210, 218, 224, 1);
   height: 97px;
+`;
 
-  & img {
-    max-width: 50%;
-    object-fit: contain;
-  }
+const ArrowButton = styled.img`
+  position: absolute;
+  top: 180px;
+  width: 40px;
+  height: 40px;
+`;
+
+const RightButton = styled(ArrowButton)`
+  left: 103%;
+`;
+
+const LeftButton = styled(ArrowButton)`
+  right: 103%;
+`;
+
+const NewsLogo = styled.img`
+  max-width: 50%;
+  object-fit: contain;
 `;
 
 function PressWrap({ news }) {
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 24;
+
   if (news.length === 0) {
     return <div>Loading...</div>;
   }
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const previousPage = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
+  const startIndex = currentPage * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, news.length);
+  const displayedNews = news.slice(startIndex, endIndex);
+
   return (
     <Main>
-      <PressGridWrap>
-        {news.slice(0, 24).map((news, index) => (
+      <PressGridWrap key={currentPage}>
+        {currentPage !== 0 && (
+          <LeftButton onClick={previousPage} src={leftBtn} alt="leftBtn" />
+        )}
+        {currentPage !== 3 && (
+          <RightButton onClick={nextPage} src={rightBtn} alt="rightBtn" />
+        )}
+        {displayedNews.map((newsItem, index) => (
           <PressBox key={index}>
-            <img src={news.logoImageSrc} alt={news.pressName}></img>
+            <NewsLogo src={newsItem.logoImageSrc} alt={newsItem.pressName} />
           </PressBox>
         ))}
       </PressGridWrap>
