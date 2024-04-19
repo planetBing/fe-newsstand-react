@@ -1,8 +1,8 @@
 import "./App.css";
 import Header from "./components/Header/Header.js";
 import RollingArea from "./components/Rolling/RollingArea.js";
-import TapViewerArea from "./components/Main/TapViewerArea.js";
-import PressWrap from "./components/Main/PressWrap.js";
+import Main from "./components/Main/Main.js";
+
 import { styled } from "styled-components";
 import { useState, useEffect } from "react";
 
@@ -26,8 +26,7 @@ function App() {
       <Wrap>
         <Header />
         <RollingArea />
-        <TapViewerArea />
-        <PressWrap news={news} />
+        <Main news={news} />
       </Wrap>
     </div>
   );
