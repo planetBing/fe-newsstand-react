@@ -6,6 +6,8 @@ import Main from "./components/Main/Main.js";
 import { styled } from "styled-components";
 import { useState, useEffect } from "react";
 
+const NEWS_API = process.env.REACT_APP_SERVER_NEWS;
+
 const Wrap = styled.div`
   width: 930px;
   margin: 7rem auto;
@@ -15,7 +17,7 @@ function App() {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/news")
+    fetch(NEWS_API)
       .then((response) => response.json())
       .then((data) => setNews(data))
       .catch((error) => console.error("Error fetching news:", error));
