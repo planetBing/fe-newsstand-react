@@ -1,6 +1,6 @@
 import { styled, keyframes, css } from "styled-components";
 import { useState, useEffect } from "react";
-import breakingNews from "../../breakingNews.js";
+import breakingNews from "../../data/breakingNews.js";
 
 const ROLLING_INTERVAL = 5000;
 
@@ -124,7 +124,7 @@ function RollingArea() {
 
   function makeNewsListHtml(newsList) {
     return newsList.map((item, index) => (
-      <li key={index} className={animationClass[index]}>
+      <li key={item.id} className={animationClass[index]}>
         <a href={item.href}>{item.title}</a>
       </li>
     ));
