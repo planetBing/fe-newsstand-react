@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 import { useState } from "react";
+import leftBtn from "../../assets/LeftButton.svg";
+import rightBtn from "../../assets/RightButton.svg";
 
 const PressWrap = styled.div`
   width: 930px;
@@ -43,6 +45,14 @@ const SelectedCategory = styled.div`
     font-size: 14px;
     color: rgba(255, 255, 255, 1);
     z-index: 2;
+  }
+
+  & span.count {
+    font-weight: 700;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    margin-right: 15px;
   }
 `;
 
@@ -149,9 +159,60 @@ const Right = styled.div`
   }
 `;
 
+const ArrowButton = styled.img`
+  position: absolute;
+  top: 180px;
+  width: 40px;
+  height: 40px;
+`;
+
+const RightButton = styled(ArrowButton)`
+  left: 103%;
+`;
+
+const LeftButton = styled(ArrowButton)`
+  right: 103%;
+`;
+
 function TotalList({ news }) {
-  const firstNews = news[0];
-  const { logoImageSrc, pressName, editedTime, headline, sideNews } = firstNews;
+  const [category, setCategory] = useState("종합/경제");
+  const [pressIndex, setPressIndex] = useState(0);
+  const currentPresses = news.filter((press) => press.category === category);
+  const currentPress = currentPresses[pressIndex];
+  const { logoImageSrc, pressName, editedTime, headline, sideNews } =
+    currentPress;
+
+  const handleCategoryClick = (clickedCategory) => {
+    setPressIndex(0);
+    setCategory(clickedCategory);
+  };
+
+  const gotoNextPage = () => {
+    const nextPressIndex = pressIndex + 1;
+    if (nextPressIndex >= currentPresses.length) {
+      const nextCategory =
+        categories[categories.findIndex((item) => item === category) + 1];
+      nextCategory ? setCategory(nextCategory) : setCategory(categories[0]);
+      setPressIndex(0);
+      return;
+    }
+    setPressIndex(nextPressIndex);
+  };
+
+  const gotoPrevPage = () => {
+    const prevPressIndex = pressIndex - 1;
+    if (prevPressIndex <= 0) {
+      const prevCategory =
+        categories[categories.findIndex((item) => item === category) - 1];
+      prevCategory
+        ? setCategory(prevCategory)
+        : setCategory(categories[categories.length - 1]);
+      setPressIndex(0);
+      return;
+    }
+    setPressIndex(prevPressIndex);
+  };
+
   const categories = [
     "종합/경제",
     "방송/통신",
@@ -161,8 +222,7 @@ function TotalList({ news }) {
     "매거진/전문지",
     "지역",
   ];
-  const [category, setCategory] = useState("종합/경제");
-  console.log(category);
+
   return (
     <PressWrap>
       <Category>
@@ -170,9 +230,14 @@ function TotalList({ news }) {
           eachCategory === category ? (
             <SelectedCategory>
               <span>{eachCategory}</span>
+              <span className="count">
+                {pressIndex + 1}/{currentPresses.length}
+              </span>
             </SelectedCategory>
           ) : (
-            <div onClick={() => setCategory(eachCategory)}>{eachCategory}</div>
+            <div onClick={() => handleCategoryClick(eachCategory)}>
+              {eachCategory}
+            </div>
           )
         )}
       </Category>
@@ -203,6 +268,8 @@ function TotalList({ news }) {
           <div>{pressName}에서 직접 편집한 뉴스입니다.</div>
         </Right>
       </NewsList>
+      <LeftButton onClick={gotoPrevPage} src={leftBtn} alt="leftBtn" />
+      <RightButton onClick={gotoNextPage} src={rightBtn} alt="rightBtn" />
     </PressWrap>
   );
 }
