@@ -1,7 +1,17 @@
-import { styled } from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { useState } from "react";
+import categories from "../../data/categories.js";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
+
+const progressAnimation = keyframes`
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+`;
 
 const PressWrap = styled.div`
   width: 930px;
@@ -15,16 +25,16 @@ const Category = styled.nav`
   background-color: rgba(245, 247, 249, 1);
   display: flex;
   align-items: center;
+`;
 
-  & div {
-    padding: 0px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(135, 146, 152, 1);
-    text-decoration: none;
-  }
+const UnselectedCategory = styled.div`
+  padding: 0px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(135, 146, 152, 1);
+  text-decoration: none;
 
-  & div:hover {
+  &:hover {
     cursor: pointer;
     text-decoration: underline;
   }
@@ -41,6 +51,7 @@ const SelectedCategory = styled.div`
   z-index: 0;
 
   & span {
+    padding: 0 16px;
     font-weight: 700;
     font-size: 14px;
     color: rgba(255, 255, 255, 1);
@@ -52,7 +63,16 @@ const SelectedCategory = styled.div`
     font-size: 12px;
     color: rgba(255, 255, 255, 1);
     z-index: 2;
-    margin-right: 15px;
+  }
+
+  & div {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(67, 98, 208, 1);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: ${progressAnimation} 20s linear infinite;
   }
 `;
 
@@ -213,31 +233,24 @@ function TotalList({ news }) {
     setPressIndex(prevPressIndex);
   };
 
-  const categories = [
-    "종합/경제",
-    "방송/통신",
-    "IT",
-    "영자지",
-    "스포츠/연예",
-    "매거진/전문지",
-    "지역",
-  ];
-
   return (
     <PressWrap>
       <Category>
         {categories.map((eachCategory) =>
           eachCategory === category ? (
-            <SelectedCategory>
+            <SelectedCategory key={`${category}-${pressIndex}`}>
               <span>{eachCategory}</span>
               <span className="count">
                 {pressIndex + 1}/{currentPresses.length}
               </span>
+              <div></div>
             </SelectedCategory>
           ) : (
-            <div onClick={() => handleCategoryClick(eachCategory)}>
+            <UnselectedCategory
+              onClick={() => handleCategoryClick(eachCategory)}
+            >
               {eachCategory}
-            </div>
+            </UnselectedCategory>
           )
         )}
       </Category>
@@ -273,21 +286,5 @@ function TotalList({ news }) {
     </PressWrap>
   );
 }
-
-// function groupByCategory(news) {
-//   const categoriesMap = new Map();
-
-//   news.forEach((item, index) => {
-//     const { category } = item;
-//     if (categoriesMap.has(category)) {
-//       const { firstIndex, count } = categoriesMap.get(category);
-//       categoriesMap.set(category, { firstIndex, count: count + 1 });
-//     } else {
-//       categoriesMap.set(category, { firstIndex: index, count: 1 });
-//     }
-//   });
-
-//   return categoriesMap;
-// }
 
 export default TotalList;
