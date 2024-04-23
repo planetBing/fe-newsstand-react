@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useState } from "react";
 
 const PressWrap = styled.div`
   width: 930px;
@@ -23,6 +24,25 @@ const Category = styled.nav`
 
   & div:hover {
     cursor: pointer;
+    text-decoration: underline;
+  }
+`;
+
+const SelectedCategory = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  background-color: rgba(120, 144, 231, 1);
+  position: relative;
+  z-index: 0;
+
+  & span {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
   }
 `;
 
@@ -141,13 +161,20 @@ function TotalList({ news }) {
     "매거진/전문지",
     "지역",
   ];
-
+  const [category, setCategory] = useState("종합/경제");
+  console.log(category);
   return (
     <PressWrap>
       <Category>
-        {categories.map((category) => (
-          <div>{category}</div>
-        ))}
+        {categories.map((eachCategory) =>
+          eachCategory === category ? (
+            <SelectedCategory>
+              <span>{eachCategory}</span>
+            </SelectedCategory>
+          ) : (
+            <div onClick={() => setCategory(eachCategory)}>{eachCategory}</div>
+          )
+        )}
       </Category>
       <PressInfo>
         <span>
