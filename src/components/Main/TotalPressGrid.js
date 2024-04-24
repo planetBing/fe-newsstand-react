@@ -1,4 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { getData } from "../../api/newsApi.js";
 import { styled } from "styled-components";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
@@ -74,12 +75,14 @@ const LeftButton = styled(ArrowButton)`
   right: 103%;
 `;
 
-function TotalGrid() {
-  const { news } = useContext(NewsContext);
+function TotalGrid({ allSubs }) {
+  const { news, subscription, setSubscription } = useContext(NewsContext);
   const [currentPage, setCurrentPage] = useState(FIRST_PAGE_INDEX);
-  const itemsPerPage = ITEMS_PER_PAGE;
+  const press =
+    allSubs === "all" ? news.slice(0, ITEMS_PER_PAGE * 4) : subscription;
+  const totalPages = Math.floor(press.length / ITEMS_PER_PAGE);
 
-  if (news.length === 0) {
+  if (news.length === 0 || subscription.length === 0) {
     return <div>Loading...</div>;
   }
 
@@ -89,28 +92,45 @@ function TotalGrid() {
 
   const subscribePress = async (newsItem) => {
     postData("subscription", newsItem);
+    setData("subscription", setSubscription);
   };
 
-  const startIndex = currentPage * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const displayedNews = news.slice(startIndex, endIndex);
+  const startIndex = currentPage * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const displayedNews = press.slice(startIndex, endIndex);
 
   return (
     <PressGridWrap>
       {currentPage !== FIRST_PAGE_INDEX && (
         <LeftButton onClick={previousPage} src={leftBtn} alt="leftBtn" />
       )}
-      {currentPage !== LAST_PAGE_INDEX && (
+      {currentPage !== totalPages - 1 && (
         <RightButton onClick={nextPage} src={rightBtn} alt="rightBtn" />
       )}
-      {displayedNews.map((newsItem, index) => (
-        <PressBox key={newsItem.id}>
-          <img src={newsItem.logoImageSrc} alt={newsItem.pressName} />
-          <span onClick={() => subscribePress(newsItem)}>+ 구독하기</span>
-        </PressBox>
-      ))}
+      {[...Array(24)].map((_, index) => {
+        const newsItem = displayedNews[index];
+        if (newsItem) {
+          return (
+            <PressBox key={newsItem.id}>
+              <img src={newsItem.logoImageSrc} alt={newsItem.pressName} />
+              <span onClick={() => subscribePress(newsItem)}>+ 구독하기</span>
+            </PressBox>
+          );
+        } else {
+          return <PressBox></PressBox>;
+        }
+      })}
     </PressGridWrap>
   );
+}
+
+async function setData(endpoint, setFn) {
+  try {
+    const data = await getData(endpoint);
+    setFn(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export default TotalGrid;

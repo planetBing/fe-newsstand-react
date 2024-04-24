@@ -46,7 +46,7 @@ const GridView = styled.img`
   ${(props) => props.grayScale && "filter: grayscale(100%);"}
 `;
 
-function Main({ news }) {
+function Main() {
   const [view, setView] = useState("grid");
   const [allSubs, setAllSubs] = useState("all");
 
@@ -54,13 +54,9 @@ function Main({ news }) {
 
   const clickGridView = () => setView("grid");
 
-  const handleAllSubsClick = () => {
-    setAllSubs("all");
-  };
+  const handleAllSubsClick = () => setAllSubs("all");
 
-  const handleSubscribedClick = () => {
-    setAllSubs("subscribed");
-  };
+  const handleSubscribedClick = () => setAllSubs("subscribed");
 
   return (
     <>
@@ -92,8 +88,8 @@ function Main({ news }) {
         </ViewerArea>
       </StyledTapViewerArea>
       <MainWrap>
-        {view === "grid" && <TotalGrid news={news} />}
-        {view === "list" && <TotalList news={news} />}
+        {view === "grid" && <TotalGrid allSubs={allSubs} />}
+        {view === "list" && <TotalList />}
       </MainWrap>
     </>
   );
