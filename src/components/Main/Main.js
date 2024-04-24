@@ -49,7 +49,7 @@ const GridView = styled.img`
 function Main({ news }) {
   const [view, setView] = useState("grid");
   const [allSubs, setAllSubs] = useState("all");
-  console.log(allSubs);
+
   const clickListView = () => setView("list");
 
   const clickGridView = () => setView("grid");

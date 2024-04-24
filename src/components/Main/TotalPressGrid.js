@@ -1,8 +1,9 @@
+import React, { useContext, useState } from "react";
 import { styled } from "styled-components";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
-import { useState } from "react";
 import { postData } from "../../api/newsApi";
+import { NewsContext } from "./Provider.js";
 
 const ITEMS_PER_PAGE = 24;
 const FIRST_PAGE_INDEX = 0;
@@ -73,7 +74,8 @@ const LeftButton = styled(ArrowButton)`
   right: 103%;
 `;
 
-function TotalGrid({ news }) {
+function TotalGrid() {
+  const { news } = useContext(NewsContext);
   const [currentPage, setCurrentPage] = useState(FIRST_PAGE_INDEX);
   const itemsPerPage = ITEMS_PER_PAGE;
 

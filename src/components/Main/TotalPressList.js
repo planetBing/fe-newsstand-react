@@ -1,5 +1,6 @@
 import { styled, keyframes } from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { NewsContext } from "./Provider.js";
 import categories from "../../data/categories.js";
 import NewsList from "./NewsList.js";
 import leftBtn from "../../assets/LeftButton.svg";
@@ -95,7 +96,8 @@ const LeftButton = styled(ArrowButton)`
   right: 103%;
 `;
 
-function TotalList({ news }) {
+function TotalList() {
+  const { news } = useContext(NewsContext);
   const [category, setCategory] = useState("종합/경제");
   const [pressIndex, setPressIndex] = useState(FIRST_INDEX);
   const currentPresses = news.filter((press) => press.category === category);
