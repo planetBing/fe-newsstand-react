@@ -1,12 +1,11 @@
-import "./css//App.css";
-import Header from "./components/Header/Header.js";
-import RollingArea from "./components/Rolling/RollingArea.js";
-import Main from "./components/Main/Main.js";
+import "../css/App.css";
+import Header from "./Header/Header.js";
+import RollingArea from "./Rolling/RollingArea.js";
+import Main from "./Main/Main.js";
+import { getData } from "../api/newsApi.js";
 
 import { styled } from "styled-components";
 import { useState, useEffect } from "react";
-
-const NEWS_API = process.env.REACT_APP_SERVER_NEWS;
 
 const Wrap = styled.div`
   width: 930px;
@@ -17,10 +16,7 @@ function App() {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    fetch(NEWS_API)
-      .then((response) => response.json())
-      .then((data) => setNews(data))
-      .catch((error) => console.error("Error fetching news:", error));
+    setData("news", setNews);
   }, []);
 
   return (
@@ -32,6 +28,15 @@ function App() {
       </Wrap>
     </div>
   );
+}
+
+async function setData(endpoint, setFn) {
+  try {
+    const data = await getData(endpoint);
+    setFn(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export default App;

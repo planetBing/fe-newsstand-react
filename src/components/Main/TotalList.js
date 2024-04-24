@@ -1,5 +1,5 @@
 import { styled, keyframes } from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import categories from "../../data/categories.js";
 import NewsList from "./NewsList.js";
 import leftBtn from "../../assets/LeftButton.svg";
@@ -52,7 +52,7 @@ const SelectedCategory = styled.div`
   z-index: 0;
 
   & span {
-    padding: 0 16px;
+    padding: 0 10px;
     font-weight: 700;
     font-size: 14px;
     color: rgba(255, 255, 255, 1);
@@ -128,6 +128,11 @@ function TotalList({ news }) {
     }
     setPressIndex(prevPressIndex);
   };
+
+  useEffect(() => {
+    const interval = setInterval(gotoNextPage, 20000);
+    return () => clearInterval(interval);
+  }, [pressIndex]);
 
   return (
     <PressWrap>
