@@ -14,3 +14,20 @@ export async function getData(endpoint) {
 
   return data;
 }
+
+export async function postData(endpoint, pressData) {
+  const request = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(pressData),
+  };
+
+  await fetch(`${SERVER}/${endpoint}`, request)
+    .then((response) => {
+      response.json();
+      console.log("구독 성공!");
+    })
+    .catch((error) => console.error("서버와의 통신 중 오류 발생:", error));
+}

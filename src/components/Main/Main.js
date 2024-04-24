@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 import { useState } from "react";
 import listSvg from "../../assets/list-view.svg";
 import gridSvg from "../../assets/grid-view.svg";
-import TotalGrid from "./TotalGrid.js";
-import TotalList from "./TotalList.js";
+import TotalGrid from "./TotalPressGrid.js";
+import TotalList from "./TotalPressList.js";
 
 const MainWrap = styled.div`
   display: flex;
@@ -20,14 +20,13 @@ const StyledTapViewerArea = styled.section`
   align-items: center;
 `;
 
-const TapArea = styled.div`
-  font-weight: 500;
+const TapArea = styled.span`
+  cursor: pointer;
   font-size: 16px;
-  color: rgba(135, 146, 152, 1);
-
-  & span {
-    margin-right: 20px;
-  }
+  margin-right: 20px;
+  font-weight: ${(props) => (props.isSelected ? "700;" : "500;")};
+  color: ${(props) =>
+    props.isSelected ? "rgba(20, 33, 43, 1)" : "rgba(135, 146, 152, 1)"};
 `;
 
 const ViewerArea = styled.div`
@@ -49,18 +48,34 @@ const GridView = styled.img`
 
 function Main({ news }) {
   const [view, setView] = useState("grid");
-
+  const [allSubs, setAllSubs] = useState("all");
+  console.log(allSubs);
   const clickListView = () => setView("list");
 
   const clickGridView = () => setView("grid");
 
+  const handleAllSubsClick = () => {
+    setAllSubs("all");
+  };
+
+  const handleSubscribedClick = () => {
+    setAllSubs("subscribed");
+  };
+
   return (
     <>
       <StyledTapViewerArea>
-        <TapArea>
-          <span>전체 언론사</span>
-          <span>내가 구독한 언론사</span>
-        </TapArea>
+        <div>
+          <TapArea onClick={handleAllSubsClick} isSelected={allSubs === "all"}>
+            전체 언론사
+          </TapArea>
+          <TapArea
+            onClick={handleSubscribedClick}
+            isSelected={allSubs === "subscribed"}
+          >
+            내가 구독한 언론사
+          </TapArea>
+        </div>
         <ViewerArea>
           <ListView
             onClick={clickListView}

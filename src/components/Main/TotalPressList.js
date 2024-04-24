@@ -5,6 +5,9 @@ import NewsList from "./NewsList.js";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
 
+const TIME_TO_TURN_PAGE = 20;
+const FIRST_INDEX = 0;
+
 const progressAnimation = keyframes`
   0% {
     width: 0%;
@@ -73,7 +76,7 @@ const SelectedCategory = styled.div`
     top: 0;
     left: 0;
     z-index: 1;
-    animation: ${progressAnimation} 20s linear infinite;
+    animation: ${progressAnimation} ${TIME_TO_TURN_PAGE}s linear infinite;
   }
 `;
 
@@ -94,12 +97,12 @@ const LeftButton = styled(ArrowButton)`
 
 function TotalList({ news }) {
   const [category, setCategory] = useState("종합/경제");
-  const [pressIndex, setPressIndex] = useState(0);
+  const [pressIndex, setPressIndex] = useState(FIRST_INDEX);
   const currentPresses = news.filter((press) => press.category === category);
   const currentPress = currentPresses[pressIndex];
 
   const handleCategoryClick = (clickedCategory) => {
-    setPressIndex(0);
+    setPressIndex(FIRST_INDEX);
     setCategory(clickedCategory);
   };
 
@@ -108,8 +111,10 @@ function TotalList({ news }) {
     if (nextPressIndex >= currentPresses.length) {
       const nextCategory =
         categories[categories.findIndex((item) => item === category) + 1];
-      nextCategory ? setCategory(nextCategory) : setCategory(categories[0]);
-      setPressIndex(0);
+      nextCategory
+        ? setCategory(nextCategory)
+        : setCategory(categories[FIRST_INDEX]);
+      setPressIndex(FIRST_INDEX);
       return;
     }
     setPressIndex(nextPressIndex);
@@ -117,20 +122,20 @@ function TotalList({ news }) {
 
   const gotoPrevPage = () => {
     const prevPressIndex = pressIndex - 1;
-    if (prevPressIndex <= 0) {
+    if (prevPressIndex <= FIRST_INDEX) {
       const prevCategory =
         categories[categories.findIndex((item) => item === category) - 1];
       prevCategory
         ? setCategory(prevCategory)
         : setCategory(categories[categories.length - 1]);
-      setPressIndex(0);
+      setPressIndex(FIRST_INDEX);
       return;
     }
     setPressIndex(prevPressIndex);
   };
 
   useEffect(() => {
-    const interval = setInterval(gotoNextPage, 20000);
+    const interval = setInterval(gotoNextPage, TIME_TO_TURN_PAGE * 1000);
     return () => clearInterval(interval);
   }, [pressIndex]);
 

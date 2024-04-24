@@ -1,5 +1,44 @@
 {
-  "subscription": [],
+  "subscription": [
+    {
+      "id": "4c3d",
+      "pressName": "서울와이어",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2022/1024/nsd174430433.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9360%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "인구절벽 해법, '2024 서울와이어 혁신포럼'에서 찾는다",
+        "href": "http://www.seoulwire.com/news/articleView.html?idxno=605404"
+      },
+      "sideNews": [
+        {
+          "title": "이란-이스라엘 갈등 격화에 국제유가·금값 급등… '인플레이션 우려'",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605426"
+        },
+        {
+          "title": "이스라엘 전쟁내각, 이란에 대한 보복 여부 결론 못내려...다시 논의키로 ",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605499"
+        },
+        {
+          "title": "'하이브리드 전성시대' ...1분기 수입차 판매량서 휘발유차 추월",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605447"
+        },
+        {
+          "title": "코코아·설탕 등 원재료값 상승… 식품물가 더 오르나",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605465"
+        },
+        {
+          "title": "수도권 집값 20주 만에 '반등'… 아파트 사야할까, 기다려야할까",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605459"
+        },
+        {
+          "title": "이란-이스라엘 확전 자제 소식에 '폭등 우려' 국제유가, 일단 '숨고르기'",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605458"
+        }
+      ]
+    }
+  ],
   "news": [
     {
       "id": "2eef",
