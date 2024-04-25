@@ -31,3 +31,19 @@ export async function postData(endpoint, pressData) {
     })
     .catch((error) => console.error("서버와의 통신 중 오류 발생:", error));
 }
+
+export async function deleteData(endpoint, pressId) {
+  const request = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  await fetch(`${SERVER}/${endpoint}/${pressId}`, request)
+    .then((response) => {
+      response.json();
+      console.log("해지 성공!");
+    })
+    .catch((error) => console.error("서버와의 통신 중 오류 발생:", error));
+}

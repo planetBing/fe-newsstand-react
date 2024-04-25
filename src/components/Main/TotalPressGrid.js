@@ -3,7 +3,7 @@ import { getData } from "../../api/newsApi.js";
 import { styled } from "styled-components";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
-import { postData } from "../../api/newsApi";
+import { postData, deleteData } from "../../api/newsApi";
 import { NewsContext } from "./Provider.js";
 
 const ITEMS_PER_PAGE = 24;
@@ -75,14 +75,14 @@ const LeftButton = styled(ArrowButton)`
   right: 103%;
 `;
 
-function TotalGrid({ allSubs }) {
+function TotalGrid({ allSubs, setAllSubs }) {
   const { news, subscription, setSubscription } = useContext(NewsContext);
   const [currentPage, setCurrentPage] = useState(FIRST_PAGE_INDEX);
   const press =
     allSubs === "all" ? news.slice(0, ITEMS_PER_PAGE * 4) : subscription;
   const totalPages = Math.floor(press.length / ITEMS_PER_PAGE);
 
-  if (news.length === 0 || subscription.length === 0) {
+  if (news.length === 0) {
     return <div>Loading...</div>;
   }
 
@@ -92,6 +92,11 @@ function TotalGrid({ allSubs }) {
 
   const subscribePress = async (newsItem) => {
     postData("subscription", newsItem);
+    setData("subscription", setSubscription);
+  };
+
+  const unsubscribePress = async (newsId) => {
+    deleteData("subscription", newsId);
     setData("subscription", setSubscription);
   };
 
@@ -113,7 +118,13 @@ function TotalGrid({ allSubs }) {
           return (
             <PressBox key={newsItem.id}>
               <img src={newsItem.logoImageSrc} alt={newsItem.pressName} />
-              <span onClick={() => subscribePress(newsItem)}>+ 구독하기</span>
+              {!subscription.find((press) => press.id === newsItem.id) ? (
+                <span onClick={() => subscribePress(newsItem)}>+ 구독하기</span>
+              ) : (
+                <span onClick={() => unsubscribePress(newsItem.id)}>
+                  - 해지하기
+                </span>
+              )}
             </PressBox>
           );
         } else {
