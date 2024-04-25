@@ -91,7 +91,9 @@ function Main() {
         {view === "grid" && (
           <GridView allSubs={allSubs} setAllSubs={setAllSubs} />
         )}
-        {view === "list" && <TotalList />}
+        {view === "list" && (
+          <TotalList allSubs={allSubs} setAllSubs={setAllSubs} />
+        )}
       </MainWrap>
     </>
   );

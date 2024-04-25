@@ -1,4 +1,8 @@
 import { styled } from "styled-components";
+import { useContext } from "react";
+import { NewsContext } from "./Provider.js";
+import { postData, deleteData } from "../../api/newsApi.js";
+import { setData } from "../utils/utils.js";
 
 const PressInfo = styled.div`
   display: flex;
@@ -103,9 +107,21 @@ const Right = styled.div`
   }
 `;
 
-function NewsListByPage({ currentPress }) {
-  const { logoImageSrc, pressName, editedTime, headline, sideNews } =
+function NewsListByPage({ currentPress, setAllSubs }) {
+  const { subscription, setSubscription } = useContext(NewsContext);
+  const { logoImageSrc, pressName, editedTime, headline, sideNews, id } =
     currentPress;
+
+  const subscribePress = async (newsItem) => {
+    await postData("subscription", newsItem);
+    setData("subscription", setSubscription);
+    setAllSubs("subscribed");
+  };
+
+  const unsubscribePress = async (newsId) => {
+    await deleteData("subscription", newsId);
+    setData("subscription", setSubscription);
+  };
   return (
     <>
       <PressInfo>
@@ -113,7 +129,13 @@ function NewsListByPage({ currentPress }) {
           <img src={logoImageSrc} alt={pressName} />
         </span>
         <span className="edit-date">{editedTime}</span>
-        <button>+ 구독하기</button>
+        {!subscription.find((press) => press.id === id) ? (
+          <button onClick={() => subscribePress(currentPress)}>
+            + 구독하기
+          </button>
+        ) : (
+          <button onClick={() => unsubscribePress(id)}>- 해지하기</button>
+        )}
       </PressInfo>
       <NewsList>
         <Left>

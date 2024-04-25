@@ -1,7 +1,7 @@
 import { styled, keyframes } from "styled-components";
 import { useState, useEffect, useContext } from "react";
 import { NewsContext } from "./Provider.js";
-import categories from "../../data/categories.js";
+// import categories from "../../data/categories.js";
 import NewsList from "./NewsList.js";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
@@ -96,11 +96,25 @@ const LeftButton = styled(ArrowButton)`
   right: 103%;
 `;
 
-function TotalList() {
-  const { news } = useContext(NewsContext);
-  const [category, setCategory] = useState("종합/경제");
+function TotalList({ allSubs, setAllSubs }) {
+  const { news, subscription } = useContext(NewsContext);
+  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState("");
   const [pressIndex, setPressIndex] = useState(FIRST_INDEX);
-  const currentPresses = news.filter((press) => press.category === category);
+
+  useEffect(() => {
+    const newCategories =
+      allSubs === "all"
+        ? [...new Set(news.map((item) => item.category))]
+        : [...new Set(subscription.map((item) => item.pressName))];
+    setCategories(newCategories);
+    setCategory(newCategories[0]);
+  }, [allSubs, news, subscription]);
+
+  const currentPresses =
+    allSubs === "all"
+      ? news.filter((press) => press.category === category)
+      : subscription.filter((press) => press.pressName === category);
   const currentPress = currentPresses[pressIndex];
 
   const handleCategoryClick = (clickedCategory) => {
@@ -139,7 +153,7 @@ function TotalList() {
   useEffect(() => {
     const interval = setInterval(gotoNextPage, TIME_TO_TURN_PAGE * 1000);
     return () => clearInterval(interval);
-  }, [pressIndex]);
+  }, [pressIndex, category]);
 
   return (
     <PressWrap>
@@ -148,9 +162,11 @@ function TotalList() {
           eachCategory === category ? (
             <SelectedCategory key={`${category}-${pressIndex}`}>
               <span>{eachCategory}</span>
-              <span className="count">
-                {pressIndex + 1}/{currentPresses.length}
-              </span>
+              {allSubs === "all" && (
+                <span className="count">
+                  {pressIndex + 1}/{currentPresses.length}
+                </span>
+              )}
               <div></div>
             </SelectedCategory>
           ) : (
@@ -162,7 +178,12 @@ function TotalList() {
           )
         )}
       </Category>
-      <NewsList currentPress={currentPress}></NewsList>
+      {currentPress && (
+        <NewsList
+          currentPress={currentPress}
+          setAllSubs={setAllSubs}
+        ></NewsList>
+      )}
       <LeftButton onClick={gotoPrevPage} src={leftBtn} alt="leftBtn" />
       <RightButton onClick={gotoNextPage} src={rightBtn} alt="rightBtn" />
     </PressWrap>
