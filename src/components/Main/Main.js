@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { useState } from "react";
 import listSvg from "../../assets/list-view.svg";
 import gridSvg from "../../assets/grid-view.svg";
-import TotalGrid from "./TotalPressGrid.js";
+import GridView from "./GridView.js";
 import TotalList from "./TotalPressList.js";
 
 const MainWrap = styled.div`
@@ -38,11 +38,11 @@ const ViewerArea = styled.div`
   }
 `;
 
-const ListView = styled.img`
+const ListViewer = styled.img`
   ${(props) => props.grayScale && "filter: grayscale(100%);"}
 `;
 
-const GridView = styled.img`
+const GridViewer = styled.img`
   ${(props) => props.grayScale && "filter: grayscale(100%);"}
 `;
 
@@ -73,13 +73,13 @@ function Main() {
           </TapArea>
         </div>
         <ViewerArea>
-          <ListView
+          <ListViewer
             onClick={clickListView}
             src={listSvg}
             alt="list svg"
             grayScale={view === "grid"}
           />
-          <GridView
+          <GridViewer
             onClick={clickGridView}
             src={gridSvg}
             alt="grid svg"
@@ -88,7 +88,9 @@ function Main() {
         </ViewerArea>
       </StyledTapViewerArea>
       <MainWrap>
-        {view === "grid" && <TotalGrid allSubs={allSubs} />}
+        {view === "grid" && (
+          <GridView allSubs={allSubs} setAllSubs={setAllSubs} />
+        )}
         {view === "list" && <TotalList />}
       </MainWrap>
     </>

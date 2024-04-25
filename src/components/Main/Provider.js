@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getData } from "../../api/newsApi.js";
+import { setData } from "../utils/utils.js";
 
 export const NewsContext = React.createContext();
 
@@ -20,12 +20,3 @@ export const NewsProvider = (props) => {
     </NewsContext.Provider>
   );
 };
-
-async function setData(endpoint, setFn) {
-  try {
-    const data = await getData(endpoint);
-    setFn(data);
-  } catch (error) {
-    console.error(error);
-  }
-}

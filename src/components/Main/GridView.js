@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { getData } from "../../api/newsApi.js";
+import { setData } from "../utils/utils.js";
 import { styled } from "styled-components";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
@@ -8,7 +8,7 @@ import { NewsContext } from "./Provider.js";
 
 const ITEMS_PER_PAGE = 24;
 const FIRST_PAGE_INDEX = 0;
-const LAST_PAGE_INDEX = 3;
+const LAST_PAGE = 4;
 
 const PressGridWrap = styled.div`
   width: 930px;
@@ -79,8 +79,14 @@ function TotalGrid({ allSubs, setAllSubs }) {
   const { news, subscription, setSubscription } = useContext(NewsContext);
   const [currentPage, setCurrentPage] = useState(FIRST_PAGE_INDEX);
   const press =
-    allSubs === "all" ? news.slice(0, ITEMS_PER_PAGE * 4) : subscription;
-  const totalPages = Math.floor(press.length / ITEMS_PER_PAGE);
+    allSubs === "all"
+      ? news.slice(FIRST_PAGE_INDEX, ITEMS_PER_PAGE * LAST_PAGE)
+      : [...subscription];
+  const totalPages = Math.ceil(press.length / ITEMS_PER_PAGE);
+
+  useEffect(() => {
+    setCurrentPage(FIRST_PAGE_INDEX);
+  }, [allSubs]);
 
   if (news.length === 0) {
     return <div>Loading...</div>;
@@ -91,12 +97,13 @@ function TotalGrid({ allSubs, setAllSubs }) {
   const previousPage = () => setCurrentPage(currentPage - 1);
 
   const subscribePress = async (newsItem) => {
-    postData("subscription", newsItem);
+    await postData("subscription", newsItem);
     setData("subscription", setSubscription);
+    setAllSubs("subscribed");
   };
 
   const unsubscribePress = async (newsId) => {
-    deleteData("subscription", newsId);
+    await deleteData("subscription", newsId);
     setData("subscription", setSubscription);
   };
 
@@ -133,15 +140,6 @@ function TotalGrid({ allSubs, setAllSubs }) {
       })}
     </PressGridWrap>
   );
-}
-
-async function setData(endpoint, setFn) {
-  try {
-    const data = await getData(endpoint);
-    setFn(data);
-  } catch (error) {
-    console.error(error);
-  }
 }
 
 export default TotalGrid;
