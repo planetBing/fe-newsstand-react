@@ -25,11 +25,14 @@ const PressWrap = styled.div`
 `;
 
 const Category = styled.nav`
+  width: 930px;
   height: 40px;
   border-bottom: 1px solid rgba(210, 218, 224, 1);
   background-color: rgba(245, 247, 249, 1);
   display: flex;
   align-items: center;
+  overflow: scroll;
+  white-space: nowrap;
 `;
 
 const UnselectedCategory = styled.div`
@@ -109,6 +112,7 @@ function TotalList({ allSubs, setAllSubs }) {
         : [...new Set(subscription.map((item) => item.pressName))];
     setCategories(newCategories);
     setCategory(newCategories[0]);
+    setPressIndex(FIRST_INDEX);
   }, [allSubs, news, subscription]);
 
   const currentPresses =
