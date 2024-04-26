@@ -78,15 +78,19 @@ const LeftButton = styled(ArrowButton)`
 function TotalGrid({ allSubs, setAllSubs }) {
   const { news, subscription, setSubscription } = useContext(NewsContext);
   const [currentPage, setCurrentPage] = useState(FIRST_PAGE_INDEX);
-  const press =
+  const presses =
     allSubs === "all"
       ? news.slice(FIRST_PAGE_INDEX, ITEMS_PER_PAGE * LAST_PAGE)
       : [...subscription];
-  const totalPages = Math.ceil(press.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(presses.length / ITEMS_PER_PAGE);
 
   useEffect(() => {
-    setCurrentPage(FIRST_PAGE_INDEX);
-  }, [allSubs]);
+    if (allSubs === "all") {
+      setCurrentPage(FIRST_PAGE_INDEX);
+    } else if (allSubs === "subscribed") {
+      currentPage > totalPages - 1 && setCurrentPage(totalPages - 1);
+    }
+  }, [allSubs, subscription]);
 
   if (news.length === 0) {
     return <div>Loading...</div>;
@@ -105,12 +109,11 @@ function TotalGrid({ allSubs, setAllSubs }) {
   const unsubscribePress = async (newsId) => {
     await deleteData("subscription", newsId);
     setData("subscription", setSubscription);
-    if (allSubs === "subscribed") setCurrentPage(totalPages);
   };
 
   const startIndex = currentPage * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  const displayedNews = press.slice(startIndex, endIndex);
+  const displayedNews = presses.slice(startIndex, endIndex);
 
   return (
     <PressGridWrap>

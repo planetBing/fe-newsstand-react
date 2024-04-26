@@ -911,6 +911,44 @@
           "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404101418223670623"
         }
       ]
+    },
+    {
+      "id": "0e0c",
+      "pressName": "아이뉴스24",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/031.png",
+      "editedTime": "04월 15일 09:55 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9025%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "[K-반도체, 방패가 필요하다]③ 올해로 수명 다하는 'K-칩스법'…'시즌2' 시급",
+        "href": "https://www.inews24.com/view/1707783"
+      },
+      "sideNews": [
+        {
+          "title": "\"텔레그램으로 살인 공모\"…'파주 호텔 사망' 남성 2명, 계획 범행 정황",
+          "href": "https://www.inews24.com/view/1708093"
+        },
+        {
+          "title": "\"2만원 치킨 팔면 1600원 남아\"…자영업자는 '배달앱 소작농'",
+          "href": "https://www.inews24.com/view/1707349"
+        },
+        {
+          "title": "여성 월평균 국민연금 39만원…남성은 75만원, 왜?",
+          "href": "https://www.inews24.com/view/1708096"
+        },
+        {
+          "title": "금융위 \"중동 사태, 국내 단기 영향 크지 않다\"",
+          "href": "https://www.inews24.com/view/1708081"
+        },
+        {
+          "title": "22대 국회 당선인 24명 코인 보유...1인당 평균 1390만원",
+          "href": "https://www.inews24.com/view/1708023"
+        },
+        {
+          "title": "사직 전공의 1300여명, 박민수 복지부 차관 고소…의·정 갈등 여전히",
+          "href": "https://www.inews24.com/view/1708076"
+        }
+      ]
     }
   ],
   "news": [

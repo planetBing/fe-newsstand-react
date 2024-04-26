@@ -1,7 +1,6 @@
 import { styled, keyframes } from "styled-components";
 import { useState, useEffect, useContext } from "react";
 import { NewsContext } from "./Provider.js";
-// import categories from "../../data/categories.js";
 import NewsList from "./NewsList.js";
 import leftBtn from "../../assets/LeftButton.svg";
 import rightBtn from "../../assets/RightButton.svg";
@@ -102,7 +101,7 @@ const LeftButton = styled(ArrowButton)`
 function TotalList({ allSubs, setAllSubs }) {
   const { news, subscription } = useContext(NewsContext);
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState("");
+  const [currentCategory, setCurrentCategory] = useState("");
   const [pressIndex, setPressIndex] = useState(FIRST_INDEX);
 
   useEffect(() => {
@@ -111,29 +110,31 @@ function TotalList({ allSubs, setAllSubs }) {
         ? [...new Set(news.map((item) => item.category))]
         : [...new Set(subscription.map((item) => item.pressName))];
     setCategories(newCategories);
-    setCategory(newCategories[0]);
+    setCurrentCategory(newCategories[0]);
     setPressIndex(FIRST_INDEX);
   }, [allSubs, news, subscription]);
 
   const currentPresses =
     allSubs === "all"
-      ? news.filter((press) => press.category === category)
-      : subscription.filter((press) => press.pressName === category);
+      ? news.filter((press) => press.category === currentCategory)
+      : subscription.filter((press) => press.pressName === currentCategory);
   const currentPress = currentPresses[pressIndex];
 
   const handleCategoryClick = (clickedCategory) => {
     setPressIndex(FIRST_INDEX);
-    setCategory(clickedCategory);
+    setCurrentCategory(clickedCategory);
   };
 
   const gotoNextPage = () => {
     const nextPressIndex = pressIndex + 1;
     if (nextPressIndex >= currentPresses.length) {
       const nextCategory =
-        categories[categories.findIndex((item) => item === category) + 1];
+        categories[
+          categories.findIndex((item) => item === currentCategory) + 1
+        ];
       nextCategory
-        ? setCategory(nextCategory)
-        : setCategory(categories[FIRST_INDEX]);
+        ? setCurrentCategory(nextCategory)
+        : setCurrentCategory(categories[FIRST_INDEX]);
       setPressIndex(FIRST_INDEX);
       return;
     }
@@ -144,10 +145,12 @@ function TotalList({ allSubs, setAllSubs }) {
     const prevPressIndex = pressIndex - 1;
     if (prevPressIndex <= FIRST_INDEX) {
       const prevCategory =
-        categories[categories.findIndex((item) => item === category) - 1];
+        categories[
+          categories.findIndex((item) => item === currentCategory) - 1
+        ];
       prevCategory
-        ? setCategory(prevCategory)
-        : setCategory(categories[categories.length - 1]);
+        ? setCurrentCategory(prevCategory)
+        : setCurrentCategory(categories[categories.length - 1]);
       setPressIndex(FIRST_INDEX);
       return;
     }
@@ -157,14 +160,14 @@ function TotalList({ allSubs, setAllSubs }) {
   useEffect(() => {
     const interval = setInterval(gotoNextPage, TIME_TO_TURN_PAGE * 1000);
     return () => clearInterval(interval);
-  }, [pressIndex, category]);
+  }, [pressIndex, currentCategory]);
 
   return (
     <PressWrap>
       <Category>
         {categories.map((eachCategory) =>
-          eachCategory === category ? (
-            <SelectedCategory key={`${category}-${pressIndex}`}>
+          eachCategory === currentCategory ? (
+            <SelectedCategory key={`${currentCategory}-${pressIndex}`}>
               <span>{eachCategory}</span>
               {allSubs === "all" && (
                 <span className="count">
