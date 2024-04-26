@@ -189,6 +189,728 @@
           "href": "http://tbs.seoul.kr/news/newsView.do?typ_800=6&idx_800=3519733&seq_800=20512514"
         }
       ]
+    },
+    {
+      "id": "7f81",
+      "pressName": "M이코노미뉴스",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2021/1221/nsd15292271.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9184%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "미-중 대결 격화와 일본 경제의 부상",
+        "href": "http://www.m-economynews.com/news/article.html?no=42782"
+      },
+      "sideNews": [
+        {
+          "title": "남은 임기 3년, 윤 대통령이 그려야 할 큰 그림",
+          "href": "http://www.m-economynews.com/news/article.html?no=42870"
+        },
+        {
+          "title": "국회미래연구원, 사교육 과열, 미래인재 양성 관련성 분석 및 정책 방향 제시",
+          "href": "http://www.m-economynews.com/news/article.html?no=42899"
+        },
+        {
+          "title": "인도도 미·중 대결의 수혜국으로 부상",
+          "href": "http://www.m-economynews.com/news/article.html?no=42891"
+        },
+        {
+          "title": "이란, 이스라엘 공습 시작... 이스라엘 99% 요격 주장, 대응 천명",
+          "href": "http://www.m-economynews.com/news/article.html?no=42893"
+        },
+        {
+          "title": "국제유가 상승에 국내도 고공행진... 정부 \"과도한 상승 자제\" 당부",
+          "href": "http://www.m-economynews.com/news/article.html?no=42892"
+        },
+        {
+          "title": "「M포토」 '남양주갑' 최민희 \"'사즉생'의 각오로 뛰겠다\"...큰 절로 지지 호소\"",
+          "href": "http://www.m-economynews.com/news/article.html?no=42848"
+        }
+      ]
+    },
+    {
+      "id": "4c3d",
+      "pressName": "서울와이어",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2022/1024/nsd174430433.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9360%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "인구절벽 해법, '2024 서울와이어 혁신포럼'에서 찾는다",
+        "href": "http://www.seoulwire.com/news/articleView.html?idxno=605404"
+      },
+      "sideNews": [
+        {
+          "title": "이란-이스라엘 갈등 격화에 국제유가·금값 급등… '인플레이션 우려'",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605426"
+        },
+        {
+          "title": "이스라엘 전쟁내각, 이란에 대한 보복 여부 결론 못내려...다시 논의키로 ",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605499"
+        },
+        {
+          "title": "'하이브리드 전성시대' ...1분기 수입차 판매량서 휘발유차 추월",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605447"
+        },
+        {
+          "title": "코코아·설탕 등 원재료값 상승… 식품물가 더 오르나",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605465"
+        },
+        {
+          "title": "수도권 집값 20주 만에 '반등'… 아파트 사야할까, 기다려야할까",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605459"
+        },
+        {
+          "title": "이란-이스라엘 확전 자제 소식에 '폭등 우려' 국제유가, 일단 '숨고르기'",
+          "href": "http://www.seoulwire.com/news/articleView.html?idxno=605458"
+        }
+      ]
+    },
+    {
+      "id": "66cb",
+      "pressName": "위키트리",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/539.png",
+      "editedTime": "04월 15일 10:01 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9157%2F100223_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "[속보] 지하철 1호선 의왕~당정역 구간서 인명사고...열차 지연",
+        "href": "https://www.wikitree.co.kr/articles/943041"
+      },
+      "sideNews": [
+        {
+          "title": "배우 설경구·송윤아 부부가 가슴 찢어지는 소식 전했다",
+          "href": "https://www.wikitree.co.kr/articles/943021"
+        },
+        {
+          "title": "파주 20대 남녀 4명 사망...뒤늦게 드러난 충격적인 추가 정황",
+          "href": "https://www.wikitree.co.kr/articles/943022"
+        },
+        {
+          "title": "“용의자 신분 알려지면 파장 클 것” 배우 김환희 몰카 사건, 충격 보도",
+          "href": "https://www.wikitree.co.kr/articles/943026"
+        },
+        {
+          "title": "이천수, 이재명 대신 원희룡의 선거 도왔던 이유 공개했다",
+          "href": "https://www.wikitree.co.kr/articles/943029"
+        },
+        {
+          "title": "축구 팬들 원성 폭발...“언제든 지휘봉 내려놓을 수 있어, 정말 죄송” (+정체)",
+          "href": "https://www.wikitree.co.kr/articles/943024"
+        },
+        {
+          "title": "결혼할 여자친구 191회 찔러 살해했는데 징역 17년... 유족의 울분",
+          "href": "https://www.wikitree.co.kr/articles/943023"
+        }
+      ]
+    },
+    {
+      "id": "ffa6",
+      "pressName": "뉴데일리",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2024/0124/nsd95528325.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9058%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "사기대출 피의자, 섹스야설가가 공직자 … 이런 [묻지마 지지] 세상이 정상?",
+        "href": "https://www.newdaily.co.kr/site/data/html/2024/04/14/2024041400030.html"
+      },
+      "sideNews": [
+        {
+          "title": "'공직'의 도덕적 기준, 이리 무너져도 되는가",
+          "href": "https://www.newdaily.co.kr/site/data/html/2024/04/14/2024041400021.html"
+        },
+        {
+          "title": "'국회의장 중립 거부' '사법부 통제' … 국민은 이제 안중에 없나",
+          "href": "https://www.newdaily.co.kr/site/data/html/2024/04/12/2024041200235.html"
+        },
+        {
+          "title": "중동 리스크에 치솟는 유가·금값 … 글로벌 금리인하도 멈추나",
+          "href": "https://www.newdaily.co.kr/site/data/html/2024/04/14/2024041400075.html"
+        },
+        {
+          "title": "野의 전방위 稅 폭탄 불보듯 … 조세, 국가경쟁력 아닌 포퓰리즘 도구 전락할 판",
+          "href": "https://biz.newdaily.co.kr/site/data/html/2024/04/12/2024041200158.html"
+        },
+        {
+          "title": "가자 인도로… 삼성·애플·마이크론 가세",
+          "href": "https://biz.newdaily.co.kr/site/data/html/2024/04/12/2024041200090.html"
+        },
+        {
+          "title": "유류세 인하 6월까지 연장 … 휘발유 ℓ당 205원 인하 유지",
+          "href": "https://biz.newdaily.co.kr/site/data/html/2024/04/15/2024041500027.html"
+        }
+      ]
+    },
+    {
+      "id": "c20a",
+      "pressName": "데일리안",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/368.png",
+      "editedTime": "04월 15일 09:46 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9090%2F095557_001.jpeg%22&type=nf312_208&service=navermain",
+        "title": "윤석열, 국민과 언론 시키는 대로 하라",
+        "href": "https://www.dailian.co.kr/news/view/1350649/?sc=Naver"
+      },
+      "sideNews": [
+        {
+          "title": "[총선백서 ②] 원희룡, 계양을 소진은 전략적 미스였을까",
+          "href": "https://www.dailian.co.kr/news/view/1350613/?sc=Naver"
+        },
+        {
+          "title": "이재명, 동작을 7번 갔는데…나경원 승리 요인은 이것",
+          "href": "https://www.dailian.co.kr/news/view/1350524/?sc=Naver"
+        },
+        {
+          "title": "또 다시 국회 벽에 막힌 부동산 정책 무더기 [기자수첩-부동산]",
+          "href": "https://www.dailian.co.kr/news/view/1350392/?sc=Naver"
+        },
+        {
+          "title": "저축은행이 이 정도 적자에 흔들린다고?…여윳돈 7조 '굳건'",
+          "href": "https://www.dailian.co.kr/news/view/1350186/?sc=Naver"
+        },
+        {
+          "title": "“기대 접었다”…힘 빠진 재건축, 공급부족 ‘경고등’",
+          "href": "https://www.dailian.co.kr/news/view/1350362/?sc=Naver"
+        },
+        {
+          "title": "[단독] 주요 피자 브랜드 5곳 중 3곳 적자",
+          "href": "https://www.dailian.co.kr/news/view/1350300/?sc=Naver"
+        }
+      ]
+    },
+    {
+      "id": "ce50",
+      "pressName": "세계일보",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/022.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9006%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "팽목항·세월호 선체 앞에서 만난 20명… 그날을 말하다",
+        "href": "https://www.segye.com/newsView/20240414529107"
+      },
+      "sideNews": [
+        {
+          "title": "\"여당·대통령실 환골탈태 않으면 더 큰 몰락\"",
+          "href": "https://www.segye.com/newsView/20240414521867"
+        },
+        {
+          "title": "[단독] 우주항공청 '재사용 발사체' 개발 나선다",
+          "href": "https://www.segye.com/newsView/20240414522000"
+        },
+        {
+          "title": "속옷조차 가리기 어렵다… 美여자 육상팀 의상 논란",
+          "href": "https://www.segye.com/newsView/20240415505385"
+        },
+        {
+          "title": "오스템임플란트 2215억 횡령범 징역 35년 확정",
+          "href": "https://www.segye.com/newsView/20240414522014"
+        },
+        {
+          "title": "갑자기 날아든 신발에 80대 할머니 얼굴 피투성이",
+          "href": "https://www.segye.com/newsView/20240415509560"
+        },
+        {
+          "title": "‘연두색’ 번호판 도입에 '벤틀리' 등록 77% 감소",
+          "href": "https://www.segye.com/newsView/20240415507380"
+        }
+      ]
+    },
+    {
+      "id": "ce40",
+      "pressName": "데일리임팩트",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2021/0819/nsd151219656.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9234%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "[K-밸류업과 행동주의] 올 주총 행주펀 전략·성과 '비약 발전'",
+        "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114672"
+      },
+      "sideNews": [
+        {
+          "title": "[세상 돌아보기] 미술 사랑, 그 아름다운 집념",
+          "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114686"
+        },
+        {
+          "title": "LGU+, 서울대와 미래 양자통신 백서 발간",
+          "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114680"
+        },
+        {
+          "title": "'3연임' 롯데카드 조좌진, 이번엔 매각 성공시킬까?",
+          "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114673"
+        },
+        {
+          "title": "30%까지 높이라는데…은행권 ‘고정금리 딜레마’ 빠진 까닭은?",
+          "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114670"
+        },
+        {
+          "title": "[시승기] 지프 랭글러 루비콘, 도심에서도 빛나는 가치!",
+          "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114671"
+        },
+        {
+          "title": "LGU+, 서울대와 미래 양자통신 백서 발간",
+          "href": "http://www.dailyimpact.co.kr/news/articleView.html?idxno=114680"
+        }
+      ]
+    },
+    {
+      "id": "dcd7",
+      "pressName": "YTN사이언스",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2020/0922/nsd152336602.png",
+      "editedTime": "04월 15일 09:55 직접 편집",
+      "category": "방송/통신",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9168%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "AI와 천 명의 대결!...위험한 답·  틀린  답· 모순 답을 찾아라!",
+        "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121125337702"
+      },
+      "sideNews": [
+        {
+          "title": "지구 온도 10개월 연속 최고...\"미지의 재앙 맞이할 수도\"",
+          "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121136262828"
+        },
+        {
+          "title": "러, 우크라 발전소 대규모 공습...IAEA '원전 불장난' 긴급회의",
+          "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121137293172"
+        },
+        {
+          "title": "방사성 오염수에 얼음 형태 형성해 깨끗한 물 회수",
+          "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121606329264"
+        },
+        {
+          "title": "교통사고 사망자 역대 최저...\"국제적 수준 못 미쳐\"",
+          "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121125169546"
+        },
+        {
+          "title": "과천과학관, '보이지 않는 우주' 기획 전시 19일 개막",
+          "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121608064134"
+        },
+        {
+          "title": "프랑스 '비건 제품에 동물성 용어 금지'...법원서 효력 정지",
+          "href": "https://science.ytn.co.kr/program/view.php?mcd=0082&key=202404121137046560"
+        }
+      ]
+    },
+    {
+      "id": "f87a",
+      "pressName": "데이터뉴스",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/804.png",
+      "editedTime": "04월 15일 09:45 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9220%2F095214_001.png%22&type=nf312_208&service=navermain",
+        "title": "LG엔솔, 보유특허 3만건 돌파…1년 새 4000건 늘렸다",
+        "href": "https://www.datanews.co.kr/news/article.html?no=132216"
+      },
+      "sideNews": [
+        {
+          "title": "하이트진로, 식음료 유일 3년 연속 1억원대 연봉",
+          "href": "https://www.datanews.co.kr/news/article.html?no=132217"
+        },
+        {
+          "title": "LG CNS, 4년 연속 수주 상승…작년 5조 돌파",
+          "href": "https://www.datanews.co.kr/news/article.html?no=132234"
+        },
+        {
+          "title": "코웨이, 호실적 타고 직원 연봉도 매년 상승",
+          "href": "https://www.datanews.co.kr/news/article.html?no=132211"
+        },
+        {
+          "title": "김창한 크래프톤 대표 연봉 3배로 늘었다",
+          "href": "https://www.datanews.co.kr/news/article.html?no=132081"
+        },
+        {
+          "title": "최대 실적 쓴 이효율 풀무원 대표, 이젠 해외사업 턴어라운드",
+          "href": "https://www.datanews.co.kr/news/article.html?no=132137"
+        },
+        {
+          "title": "결제 매출 1조 넘긴 NHN, 올해는 게임사업 키운다",
+          "href": "https://www.datanews.co.kr/news/article.html?no=132019"
+        }
+      ]
+    },
+    {
+      "id": "90b2",
+      "pressName": "프레시안",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/002.png",
+      "editedTime": "04월 15일 09:27 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9031%2F093550_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "\"수학여행 보름만에 돌아온 막둥이, 신던 슬리퍼 얼굴 묻고 통곡했어요\"",
+        "href": "https://www.pressian.com/pages/articles/2024041220021695445&amp;utm_source=naver&amp;utm_medium=mynews"
+      },
+      "sideNews": [
+        {
+          "title": "내부 갈등 수습한 의사들 \"의대 증원 원점 재논의가 의사 입장\"",
+          "href": "https://www.pressian.com/pages/articles/2024041509165593406&amp;utm_source=naver&amp;utm_medium=mynews"
+        },
+        {
+          "title": "조국, 尹 대통령에 \"만나자\"…대통령실 \"내부 정비 후에\"",
+          "href": "https://www.pressian.com/pages/articles/2024041417244783542&amp;utm_source=naver&amp;utm_medium=mynews"
+        },
+        {
+          "title": "예상 깬 이란 '직접 보복'…가자 전쟁 '미지의 영역'으로",
+          "href": "https://www.pressian.com/pages/articles/2024041416394168444&amp;utm_source=naver&amp;utm_medium=mynews"
+        },
+        {
+          "title": "'입틀막' 계속? 선방위, MBC '김건희 명품백' 등 의혹 보도에 '법정제재' 돌입",
+          "href": "https://www.pressian.com/pages/articles/2024041509030995891&amp;utm_source=naver&amp;utm_medium=mynews"
+        },
+        {
+          "title": "尹대통령 지지율, 일간 기준 총선 직후 20%대로 폭락",
+          "href": "https://www.pressian.com/pages/articles/2024041508552178911&amp;utm_source=naver&amp;utm_medium=mynews"
+        },
+        {
+          "title": "신평, 대통령 두고 \"편집증적 집착에 빠진 무리에 사로잡히지 않을까 우려\"",
+          "href": "https://www.pressian.com/pages/articles/2024041423381159306&amp;utm_source=naver&amp;utm_medium=mynews"
+        }
+      ]
+    },
+    {
+      "id": "f8ca",
+      "pressName": "경향신문",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/032.png",
+      "editedTime": "04월 15일 09:58 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9001%2F100223_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "조국 “‘데드덕’ 운명 윤 대통령···관심은 자신과 배우자 신변안전뿐”",
+        "href": "https://www.khan.co.kr/politics/assembly/article/202404150949001/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_top_imageC"
+      },
+      "sideNews": [
+        {
+          "title": "재점화된 ‘김건희 주가조작 의혹 조사’…대통령실·검찰 ‘균열’ 불씨 될까",
+          "href": "https://www.khan.co.kr/national/court-law/article/202404150600025/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_top_thumb1C"
+        },
+        {
+          "title": "국민의힘 차기 당권은…비상 걸리니 눈에 들어오는 ‘비윤’ ‘30대’",
+          "href": "https://www.khan.co.kr/politics/assembly/article/202404150600015/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_top_thumb2C"
+        },
+        {
+          "title": "1호선 의왕~당정 구간서 인명 사고…전철 운행 차질",
+          "href": "https://www.khan.co.kr/national/incident/article/202404150853001/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_top_thumb3C"
+        },
+        {
+          "title": "“‘쥴리 보도’ 징계하려는 김백 사장, KBS 박민처럼 공포정치”",
+          "href": "https://www.khan.co.kr/national/media/article/202404142050005/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_sub_thumb1C"
+        },
+        {
+          "title": "윤 대통령 지지율 32.6%···“지난해 10월 이후 최저”[리얼미터]",
+          "href": "https://www.khan.co.kr/politics/politics-general/article/202404150821011/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_sub_thumb2C"
+        },
+        {
+          "title": "방치된 고통…참사 희생자의 아들은 왜 30년 뒤 감옥에 갇혔나",
+          "href": "https://www.khan.co.kr/national/national-general/article/202404150600121/?nv=stand&utm_source=naver&utm_medium=portal_news&utm_content=240415&utm_campaign=newsstand_sub_thumb3C"
+        }
+      ]
+    },
+    {
+      "id": "9baa",
+      "pressName": "이로운넷",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/825.png",
+      "editedTime": "04월 15일 10:00 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9244%2F100223_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "[이로운톺아보기]총선 하루 지나 열린 나라 곳간 살펴보니…'역대 최대 세수결손'에 적자 87조",
+        "href": "https://www.eroun.net/news/articleView.html?idxno=42229"
+      },
+      "sideNews": [
+        {
+          "title": "[이로운넷칼럼]尹의 무능·불통에 성난 국민이 회초리를…4·10총선이 남긴 과제",
+          "href": "https://www.eroun.net/news/articleView.html?idxno=42194"
+        },
+        {
+          "title": "[이로운넷체크]4·10총선 \"야당 압승\"···민주 단독과반174석·국힘 개헌저지선 지켜 109석",
+          "href": "https://www.eroun.net/news/articleView.html?idxno=42173"
+        },
+        {
+          "title": "[이로운넷시선]출구조사 발표 이후 명암 갈린 정치권 표정",
+          "href": "https://www.eroun.net/news/articleView.html?idxno=42168"
+        },
+        {
+          "title": "[이로운주목]운명의 날, 방송3사 출구조사 오후 6시 공표…'범야권 200석 확보'가 최대 이슈",
+          "href": "https://www.eroun.net/news/articleView.html?idxno=42161"
+        },
+        {
+          "title": "[4·10총선 D-1]여야 대표 말·말·말…\"범야 200석\" vs. \"여 과반\"이 화두로",
+          "href": "https://www.eroun.net/news/articleView.html?idxno=42130"
+        },
+        {
+          "title": "[기획특집-지방분권]-⑩ 사회지속을 위해 화합민주제의 풀뿌리자치를 필요로 한다",
+          "href": "https://www.eroun.net/news/articleView.html?idxno=42053"
+        }
+      ]
+    },
+    {
+      "id": "926b",
+      "pressName": "미디어오늘",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/006.png",
+      "editedTime": "04월 15일 10:00 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9029%2F100223_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "세월호 참사 10주기 앞둔 신문들 1면은",
+        "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317345"
+      },
+      "sideNews": [
+        {
+          "title": "디즈니플러스 계정 공유 단속 예고… 만성 적자 개선할까",
+          "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317343"
+        },
+        {
+          "title": "TV조선 주말앵커 “총선 참패 중심에 윤 대통령 있다…부인 어려워”",
+          "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317341"
+        },
+        {
+          "title": "민주 “尹대통령 채상병 특검법 거부시 국민이 거부” 안철수 “찬성”",
+          "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317344"
+        },
+        {
+          "title": "이게 건전재정? 나랏빚 1126조 원 파장에 ‘통계 꼼수’ 논란까지",
+          "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317342"
+        },
+        {
+          "title": "쿠팡 멤버십 인상에 반응 냉담 “막강한 시장 지배력 내세워 횡포”",
+          "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317338"
+        },
+        {
+          "title": "천하람 박성태 “윤 대통령 쇄신? 불편한 질문받고…언론탄압 책임자 경질”",
+          "href": "https://www.mediatoday.co.kr/news/articleView.html?idxno=317340"
+        }
+      ]
+    },
+    {
+      "id": "7637",
+      "pressName": "파이낸셜뉴스",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/014.png",
+      "editedTime": "04월 15일 09:49 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9021%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "'의사 이길 수 없다' 前 의협회장, 파격 선언 \"정치세력을...\"",
+        "href": "https://www.fnnews.com/news/202404141704264110?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+      },
+      "sideNews": [
+        {
+          "title": "\"한국 남자는 모두 이런가요\"...태국여성의 호소",
+          "href": "https://www.fnnews.com/news/202404150758352438?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+        },
+        {
+          "title": "\"하루 10개비 이상의 담배 피우는 남성은...\"",
+          "href": "https://www.fnnews.com/news/202404150700391254?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+        },
+        {
+          "title": "경기 하천서 50대 숨진 채 발견, 현장 살펴보니..",
+          "href": "https://www.fnnews.com/news/202404150852015649?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+        },
+        {
+          "title": "\"총선 패배 후 尹 지지율이...\" 여론조사 결과",
+          "href": "https://www.fnnews.com/news/202404150801024948?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+        },
+        {
+          "title": "'4혼' 71세 박영규, 아내와 나이차가...깜짝",
+          "href": "https://www.fnnews.com/news/202404150001229392?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+        },
+        {
+          "title": "\"한도 초과\"..여성 의원에 쏟아진 후원금, 왜?",
+          "href": "https://www.fnnews.com/news/202404150858364182?utm_source=naver&utm_medium=naver_newsstand&utm_campaign=fnnews&pg=nv_newsstand"
+        }
+      ]
+    },
+    {
+      "id": "9ecd",
+      "pressName": "한국금융신문",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/968.png",
+      "editedTime": "04월 15일 09:30 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9193%2F094600_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "비트코인 현물 ETF, ‘여소야대’ 총선 결과에 거래 허용되나 [4.10 총선 영향]",
+        "href": "https://www.fntimes.com/html/view.php?ud=20240414214636381222f8e8c22c_18"
+      },
+      "sideNews": [
+        {
+          "title": "[르포] 직격탄 맞은 다세대·연립, 대출금 못 갚아 법원行…왜?",
+          "href": "https://www.fntimes.com/html/view.php?ud=2024041422255253dd55077bc2_18"
+        },
+        {
+          "title": "조병규, 해외법인 ‘성장 전환’ 부심…쇄신 전략 통할까",
+          "href": "https://www.fntimes.com/html/view.php?ud=202404142004467835dd55077bc2_18"
+        },
+        {
+          "title": "대표·의장 겸직한 오너…4대 그룹 중 현대車 유일 [2024 이사회 톺아보기]",
+          "href": "https://www.fntimes.com/html/view.php?ud=202404142113171122dd55077bc2_18"
+        },
+        {
+          "title": "“이 안건 반댈세”…지방금융지주 3곳 중 BNK 이사진만 제구실  [금융 이사회 줌人 (2) 사외이사]",
+          "href": "https://www.fntimes.com/html/view.php?ud=202404142042376083dd55077bc2_18"
+        },
+        {
+          "title": "‘한화 3남’ 김동선 “덩치가 커졌어요”",
+          "href": "https://www.fntimes.com/html/view.php?ud=20240414222020948dd55077bc2_18"
+        },
+        {
+          "title": "GA 대표들 “시장 확대 따른 판매전문회사 법제화 시급” [GA 기획]",
+          "href": "https://www.fntimes.com/html/view.php?ud=202404142110152953dd55077bc2_18"
+        }
+      ]
+    },
+    {
+      "id": "372c",
+      "pressName": "인더스트리뉴스",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2021/0907/nsd9423633.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9222%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "[In터뷰] 굿위, 다양한 최신 기능 탑재해 모두에게 친절한 스트링 인버터 공급",
+        "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52961"
+      },
+      "sideNews": [
+        {
+          "title": "콩가텍, COM-HPC Mini 모듈용 3.5인치 애플리케이션 캐리어 보드 출시",
+          "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52964"
+        },
+        {
+          "title": "리벨리온, 생성형 AI용 차세대 신경망 처리 장치에 아테리스 제품 선택",
+          "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52942"
+        },
+        {
+          "title": "[B트렌드] 전기차 판매량 감소 영향 배터리 시장 주춤… 삼성SDI만 성장률 높여",
+          "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52963"
+        },
+        {
+          "title": "UNIST, 크라우드소싱 통합한 라스트 마일 배송으로 물류 최적화 도출",
+          "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52962"
+        },
+        {
+          "title": "[In터뷰] 네모시스템, ‘기가IPC’로 산업용 컴퓨터 시장 이끈다… “선두기업으로 발돋움 중”",
+          "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52864"
+        },
+        {
+          "title": "[In터뷰] 비에스텍, 오랜 태양광 시공 경험으로 푸는 인버터 선정 팁… 전력시장 변화 대응 필수",
+          "href": "http://www.industrynews.co.kr/news/articleView.html?idxno=52954"
+        }
+      ]
+    },
+    {
+      "id": "434d",
+      "pressName": "조선일보",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2020/0903/nsd185255316.png",
+      "editedTime": "04월 15일 09:43 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9007%2F095214_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "\"전재수는 우리 동네 서민…아무리 센사람 와도 안돼\"",
+        "href": "https://www.chosun.com/politics/assembly/2024/04/15/YFJKJALZ7VEKVPVE5NM3VX23G4/"
+      },
+      "sideNews": [
+        {
+          "title": "이천수 \"난 정치·左右 몰라…선거도 쿨하게 싸울 수 없나\"",
+          "href": "https://www.chosun.com/opinion/2024/04/15/BCP6TKLV7NFG3EBRSRZPLGVXC4/"
+        },
+        {
+          "title": "새총리 후보에 이정현 거론…원희룡 비서실장 카드는 고심",
+          "href": "https://www.chosun.com/politics/election2024/2024/04/15/CWABZROTUZEITBVWCW4OKJK2SA/"
+        },
+        {
+          "title": "우즈 100번째 라운드 '감동의 꼴찌'",
+          "href": "https://www.chosun.com/sports/golf/2024/04/15/YHO7PFIYTRGQNHQX76KQELFRXU/"
+        },
+        {
+          "title": "여소야대… 24차례 尹민생토론회, 대부분 공수표된다",
+          "href": "https://www.chosun.com/politics/politics_general/2024/04/15/3IXJ5FSG5VCX7OQNWIRXL6UKLI/"
+        },
+        {
+          "title": "野 당선자들, 벌써부터 \"의장은 중립 아냐\" \"사법부 통제\"",
+          "href": "https://www.chosun.com/politics/election2024/2024/04/15/MHB5Y34YCVHX5G7H7L3KED7C7Q/"
+        },
+        {
+          "title": "\"이거 참 좋더라\"… 7080 선배들이 알려주는 은퇴 로드맵",
+          "href": "https://www.chosun.com/economy/money/2024/04/15/66TNXJ5O7VBYLF46O23AJUUN4I/"
+        }
+      ]
+    },
+    {
+      "id": "59ca",
+      "pressName": "매일노동뉴스",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/969.png",
+      "editedTime": "04월 15일 07:40 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9183%2F074548_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "[계약직 340명 내보낸 르노코리아] 넉 달 만에 정부 지원 계약직 모집공고",
+        "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221018"
+      },
+      "sideNews": [
+        {
+          "title": "직장인 10명 중 9명 “모든 사업장 근기법 적용해야”",
+          "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221017"
+        },
+        {
+          "title": "파업이 사회재난? 노동 3권 무력화 우려",
+          "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221020"
+        },
+        {
+          "title": "재정안정·노후보장, 연금개혁 어디에 힘 실릴까",
+          "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221023"
+        },
+        {
+          "title": "‘원청=도급인’ 잇단 판결, 대법원 ‘새 법리’ 나올까",
+          "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221024"
+        },
+        {
+          "title": "국정 쇄신 시간 걸리는 대통령실 … 정치인 출신 발탁 유력",
+          "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221021"
+        },
+        {
+          "title": "건설업계 새 바람 ‘공급망 실사’ “노동·인권 강화” 필수",
+          "href": "http://www.labortoday.co.kr/news/articleView.html?idxno=221022"
+        }
+      ]
+    },
+    {
+      "id": "f01c",
+      "pressName": "대한경제",
+      "logoImageSrc": "https://s.pstatic.net/static/newsstand/up/2022/1115/nsd153942530.png",
+      "editedTime": "04월 15일 09:50 직접 편집",
+      "category": "종합/경제",
+      "headline": {
+        "thumbnailSrc": "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fnewsstand%2F2024%2F0415%2Farticle_img%2Fnew_main%2F9185%2F095557_001.jpg%22&type=nf312_208&service=navermain",
+        "title": "플랜트건설 인력난 발등의 불인데…외국인 도입 안갯속",
+        "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404121454109920208"
+      },
+      "sideNews": [
+        {
+          "title": "한은 “외환 변동성 확대되면 시장안정화 조치 시행할 것”",
+          "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404150913553910621"
+        },
+        {
+          "title": "한국CM협회, 제11기 임원 선임",
+          "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404150908499440617"
+        },
+        {
+          "title": "환경신기술 활용 급증…누적 실적 9兆 돌파",
+          "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404121512339850216"
+        },
+        {
+          "title": "1.8조 대장∼홍대선 금융주선 수면 위로…올 민자철도 지분투자액 1조원 육박",
+          "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404121647446040255"
+        },
+        {
+          "title": "[알립니다] 건설현장 중대재해 대응전략 제시한다",
+          "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404141455072170525"
+        },
+        {
+          "title": "[포토] 투표 위해 늘어선 긴 줄",
+          "href": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202404101418223670623"
+        }
+      ]
     }
   ],
   "news": [

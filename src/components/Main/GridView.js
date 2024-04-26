@@ -105,6 +105,7 @@ function TotalGrid({ allSubs, setAllSubs }) {
   const unsubscribePress = async (newsId) => {
     await deleteData("subscription", newsId);
     setData("subscription", setSubscription);
+    if (allSubs === "subscribed") setCurrentPage(totalPages);
   };
 
   const startIndex = currentPage * ITEMS_PER_PAGE;
