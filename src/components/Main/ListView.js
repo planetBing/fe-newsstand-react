@@ -56,6 +56,7 @@ const SelectedCategory = styled.div`
   background-color: rgba(120, 144, 231, 1);
   position: relative;
   z-index: 0;
+  // padding-right: 70px;
 
   & span {
     padding: 0 10px;

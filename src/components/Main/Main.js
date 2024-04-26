@@ -3,7 +3,7 @@ import { useState } from "react";
 import listSvg from "../../assets/list-view.svg";
 import gridSvg from "../../assets/grid-view.svg";
 import GridView from "./GridView.js";
-import TotalList from "./TotalPressList.js";
+import ListView from "./ListView.js";
 
 const MainWrap = styled.div`
   display: flex;
@@ -92,7 +92,7 @@ function Main() {
           <GridView allSubs={allSubs} setAllSubs={setAllSubs} />
         )}
         {view === "list" && (
-          <TotalList allSubs={allSubs} setAllSubs={setAllSubs} />
+          <ListView allSubs={allSubs} setAllSubs={setAllSubs} />
         )}
       </MainWrap>
     </>
